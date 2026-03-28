@@ -9,6 +9,8 @@ TagManager:
   - Deadwater
   - ButtonBlue
   - ButtonRed
+  - Diamond
+  - RedDead
   layers:
   - Default
   - TransparentFX

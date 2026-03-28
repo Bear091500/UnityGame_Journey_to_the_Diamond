@@ -25,6 +25,12 @@ using UnityEngine.SceneManagement;
 
 public class UIretry : MonoBehaviour
 {
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.R)){
+            RestartGame();
+        }
+    }
     public void RestartGame()
     {
         Debug.Log("按鈕被按了");

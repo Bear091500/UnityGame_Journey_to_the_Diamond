@@ -22,7 +22,7 @@ public class PlayerMovement_red : MonoBehaviour
         if (other.CompareTag("Ground")){
             isGrounded = true;
         }
-        if (other.CompareTag("Deadwater")){
+        if (other.CompareTag("Deadwater")||other.CompareTag("RedDead")){
             Debug.Log("dead");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
