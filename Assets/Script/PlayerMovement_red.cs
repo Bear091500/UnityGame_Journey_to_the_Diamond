@@ -26,15 +26,19 @@ public class PlayerMovement_red : MonoBehaviour
             Debug.Log("dead");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (other.CompareTag("ButtonRed")){
+        /*if (other.CompareTag("ButtonRed")){
             Debug.Log("Red");
             door.Button2Pressed = true;
-        }
+        }*/
     }
     void OnTriggerExit2D(Collider2D other){
         if (other.CompareTag("Ground")){
             isGrounded = false;
         }
+        /*if (other.CompareTag("ButtonRed")){
+            Debug.Log("Red");
+            door.Button2Pressed = false;
+        }*/
     }
     // Update is called once per frame
     void Update()

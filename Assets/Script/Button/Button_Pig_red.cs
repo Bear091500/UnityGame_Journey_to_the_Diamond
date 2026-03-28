@@ -1,12 +1,11 @@
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class Button_Pig_red : MonoBehaviour
 {
-    public Door door;
-
-    public float pressDepth = 0.1f; // 按下去的距離
-    public float speed = 5f;        // 動畫速度
-
+    public string targetObjectName;
+    float pressDepth = 0.1f; // 按下去的距離
+    float speed = 5f;        // 動畫速度
+    public Door2pressed door;
     private Vector3 originalPos;
     private Vector3 pressedPos;
     private bool isPressed = false;
@@ -36,7 +35,7 @@ public class Button : MonoBehaviour
             isPressed = true;
 
             if (door != null)
-                door.Disappear();
+                door.Button1Pressed = true;
 
             Debug.Log("press");
         }
@@ -49,9 +48,14 @@ public class Button : MonoBehaviour
             isPressed = false;
 
             if (door != null)
-                door.Appear();
+                door.Button1Pressed = false;
 
             Debug.Log("ex");
         }
+    }
+    public void Disappear()
+    {
+        GetComponent<SpriteRenderer>().enabled = false; 
+        GetComponent<Collider2D>().enabled = false;  
     }
 }

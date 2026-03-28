@@ -3,7 +3,7 @@ using UnityEngine;
 public class ButtonOpposite : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Door door;
+    public Door_transparent door;
     void Start()
     {
         door.Disappear();

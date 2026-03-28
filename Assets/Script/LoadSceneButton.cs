@@ -3,6 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneButton : MonoBehaviour
 {
+    
+    void Start()
+    {
+        
+    }
     public void LoadSampleScene()
     {
         SceneManager.LoadScene("SampleScene");
@@ -14,5 +19,13 @@ public class LoadSceneButton : MonoBehaviour
     public void Loadstarmenu()
     {
         SceneManager.LoadScene("starmenu");
+    }
+    public void LoadEndingScene()
+    {
+        SceneManager.LoadScene("EndingScene");
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
